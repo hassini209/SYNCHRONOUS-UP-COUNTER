@@ -27,20 +27,44 @@ The next flip-flop need only “recognize” that the first flip-flop’s Q outp
 However, the remaining flip-flops should be made ready to toggle only when all lower-order output bits are “high,” thus the need for AND gates.
 
 **Procedure**
+Step1: Define the specifications and initialize the design.
+Step2: Declare the name of the entity and architecture by using VHDL source code.
+Step3: Write the source code in VERILOG.
+Step4: Check the syntax and debug the errors if found, obtain the synthesis report.
+Step5: Verify the output by simulating the source code.
+Step6: Write all possible combinations of input using the test bench.
+Step7: Obtain the place and route report. 
+
+
 
 /* write all the steps invloved */
 
 **PROGRAM**
+module ex11 (out,clk,rstn); 
+input clk,rstn;
+output reg [3:0] out;
+always @ (posedge clk)
+begin 
+	if(!rstn) 
+		out<=0; 
+	else 
+		out <= out+1; 
+end 
+endmodule
 
 /* Program for flipflops and verify its truth table in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:
+Developed by:hassini.k RegisterNumber:25013616
 */
 
 **RTL LOGIC UP COUNTER**
+<img width="1920" height="1020" alt="Screenshot 2025-10-07 184643" src="https://github.com/user-attachments/assets/764bce86-50dd-4005-8ad6-6deecce03a3d" />
+
 
 **TIMING DIAGRAM FOR IP COUNTER**
+<img width="1920" height="1020" alt="Screenshot 2025-10-07 184938" src="https://github.com/user-attachments/assets/c6910c5c-3e7e-4079-aec0-60cc3649c1b3" />
 
 **TRUTH TABLE**
+
 
 **RESULTS**
